@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spud Forge Kitchen - Discord</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fdf6e3; /* Light yellow/cream background */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Spud Forge Kitchen – Discord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdf6e3; /* Light yellow/cream background */
+    }
+  </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white p-8 rounded-xl shadow-2xl border border-yellow-300 flex flex-col items-center max-w-md w-full text-center">
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-orange-700 drop-shadow-lg mb-6">
-            Welcome to Spud Forge Kitchen!
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-700 mb-8">
-            Join our community and get cooking with us on Discord!
-        </p>
+  <main class="bg-white p-8 rounded-xl shadow-2xl border border-yellow-300 flex flex-col items-center max-w-md w-full text-center">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-orange-700 drop-shadow-lg mb-6">
+      Welcome to Spud Forge Kitchen!
+    </h1>
 
-        <!-- Potato Chip Coin Image -->
-        <img
-            src="chip_image.png" <!-- Updated to reference image directly from repository root -->
-            alt="Potato Chip Coin"
-            class="w-48 h-48 rounded-full object-cover border-4 border-yellow-400 shadow-lg mb-6"
-            onerror="this.onerror=null;this.src='https://placehold.co/192x192/FFD700/8B4513?text=CHIP';"
-        />
-        <p class="text-md text-gray-600 mb-8">
-            Behold the official Potato Chips (CHIP) token, the crispy currency powering Spud Forge Kitchen!
-        </p>
-        <iframe src="https://discord.com/widget?id=1390368984389521529&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        <footer class="w-full text-center mt-12 py-4 text-gray-600 text-sm">
-            <p>&copy; {new Date().getFullYear()} Spud Forge Kitchen. All rights reserved.</p>
-        </footer>
-    </div>
+    <p class="text-lg sm:text-xl text-gray-700 mb-8">
+      Join our community and get cooking with us on Discord!
+    </p>
+
+    <!-- Potato Chip Coin image -->
+    <img src="./chip_image.png"
+         alt="Potato Chips (CHIP) token logo"
+         class="w-48 h-48 rounded-full object-cover border-4 border-yellow-400 shadow-lg mb-6"
+         onerror="this.onerror=null;this.src='https://placehold.co/192x192/FFD700/8B4513?text=CHIP';"/>
+
+    <p class="text-md text-gray-600 mb-8">
+      Behold the official <strong>Potato Chips (CHIP)</strong> token — the crispy currency powering Spud Forge Kitchen!
+    </p>
+
+    <!-- Embedded Discord widget -->
+    <iframe src="https://discord.com/widget?id=1390368984389521529&theme=dark"
+            width="350" height="500" allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            class="rounded-lg shadow-lg mb-8"></iframe>
+
+    <footer class="w-full text-center mt-12 py-4 text-gray-600 text-sm">
+      <p>&copy; <span id="year"></span> Spud Forge Kitchen. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Print the current year into the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
